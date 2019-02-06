@@ -1,0 +1,45 @@
+<form action="" class="emp-form" #employee="ngForm" (submit)="onSubmit(employee)" autocomplete="false">
+  <div class="form-row">
+    
+    <div class="form-group col-md-6" >
+   <input class="form-controller" name="FirstName" #firstname="ngModel" [(ngModel)]="employeeservice/selectedEmployee/FirstName" placeholder="FirstName" required>
+   <div class="validation-error" *ngIf="firstname.invalid && firstname.touched && firstname.dirty">This field is requered</div>
+    </div>
+  
+    <div class="form-group col-md-6" >
+   <input class="form-controller" name="LastName" #lastname="ngModel" [(ngModel)]="employeeservice/selectedEmployee/LastName" placeholder="LastName" required>
+   <div class="validation-error" *ngIf="lastname.invalid && lastname.touched && lastname.dirty">This field is requered</div>
+    </div>
+  
+  </div>
+  <div class="form-row">
+  <div class="form-group " >
+      <input class="form-controller" name="Position" #position="ngModel" [(ngModel)]="employeeservice/selectedEmployee/Position" placeholder="Position" required>
+      <div class="validation-error" *ngIf="position.invalid && position.touched && position.dirty">This field is requered</div>
+       </div>
+      </div>
+      
+       <div class="form-row">
+    
+          <div class="form-group col-md-6" >
+         <input class="form-controller" name="EmpCode" #empCode="ngModel" [(ngModel)]="employeeservice/selectedEmployee/EmpCode" placeholder="EmpCode" required>
+         <div class="validation-error" *ngIf="empCode.invalid && empCode.touched && empCode.dirty">This field is requered</div>
+          </div>
+        
+          <div class="form-group col-md-6" >
+         <input class="form-controller" name="Office" #office="ngModel" [(ngModel)]="employeeservice/selectedEmployee/Office" placeholder="Office" required>
+         <div class="validation-error" *ngIf="office.invalid && office.touched && office.dirty">This field is requered</div>
+          </div>
+          </div>
+          <div class="form-row">
+    
+              <div class="form-group col-md-8" >
+     <button type="submit" class="btn btn-lg btn-block btn-info">Submit</button>
+              </div>
+            
+              <div class="form-group col-md-4" >
+                  <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="Reset(employee)">Reset</button>
+              </div>
+              </div>
+  </form>
+  

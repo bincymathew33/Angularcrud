@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+form.emp-form
+{
+background: gray;
+padding: 1px;
+border-radius: 4px;
+margin-left:12px
+}
+div.validation-error{
+    color:red;
+    text-align: center;
+}
+input.ng-dirty ng-invalid{
+    border-color: red;
+}
